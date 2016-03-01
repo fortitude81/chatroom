@@ -9,7 +9,7 @@ app.controller('mainCtrl', function($scope, parseService){
 
   parseService.getData().then(function(res){  //implement a promise
     console.log(res)
-    $scope.messages = res.data.results;
+    $scope.messages = res.data.results;  //object format saved to messages
   });
 }
 $scope.getParseData()
@@ -19,7 +19,7 @@ $scope.getParseData()
   //pass that text to the postData method on the parseService object which will then post it to the parse backend.
   $scope.postData = function(){
     parseService.postData($scope.message)
-    $scope.message = ""; 
+    $scope.message = ""; // clears input field after entered message
   }
 
 

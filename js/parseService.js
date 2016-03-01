@@ -1,6 +1,6 @@
 var app = angular.module('chatroom');
 
-app.service('parseService', function($http){
+app.service('parseService', function($http, $q){
   //Here you'll need to create two methods. One called postData and the other called getData.
   
   
